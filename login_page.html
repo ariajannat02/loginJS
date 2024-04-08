@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="form-container">
+    <form id="loginForm" action="/login" method="post">
+        <h2>~ Login here ~</h2>
+        <div id="errorContainer"></div>
+        <input type="email" name="email" required placeholder="your email">
+        <input type="password" name="password" required placeholder="your password">
+        <input type="submit" name="submit" value="Login Now!" class="form-btn">
+        <p>Don't have an account? <a href="register_page.html">Register</a></p>
+    </form>
+</div>
+
+<script src="login_script.js"></script>
+<script>
+    document.getElementById('loginForm').addEventListener('submit', async function(event) {
+        event.preventDefault();
+        
+        const formData = new FormData(event.target);
+        const email = formData.get('email');
+        const password = formData.get('password');
+
+        const { handleSubmit } = require('./login_script');
+        const errors = await handleSubmit({ email, password });
+
+        if (errors) {
+            const errorContainer = document.getElementById('errorContainer');
+            errorContainer.innerHTML = '';
+            errors.forEach(function(error) {
+                const errorElement = document.createElement('span');
+                errorElement.className = 'error-msg';
+                errorElement.textContent = error;
+                errorContainer.appendChild(errorElement);
+            });
+        } else {
+            // Redirect to user page or do something else
+            window.location.href = 'user_page.html';
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@100;700&display=swap');
+
+.kalnia-product {
+    font-family: "Kalnia", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+/* welcome page styling */
+.container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .content{
+    text-align: center;
+}
+
+.container .content h2{
+    font-size: 30px;
+    color:slateblue
+}
+
+.container .content h2 span{
+    background: rgb(253, 183, 232);
+    color: #ffffff;
+    border-radius: 5px;
+    padding:0 10px;
+
+}
+
+.container .content p{
+    font-size: 25px;
+    color:slateblue
+}
+
+.container .content .btn{
+    display: inline-block;
+    font-size: 30px;
+    background: rgb(253, 183, 232);
+    color: #ffffff;
+    border-radius: 10px;
+    padding:0 50px;
+    text-decoration: none;
+
+}
+
+.container .content .btn:hover{
+    background: rgb(159, 0, 108);
+
+}
+
+/* register/login page styling */
+.form-container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:20px;
+    padding-bottom: 60px;
+    background: #ffffff;
+}
+
+.form-container form{
+    max-width: 600px;
+    margin:0 auto;
+    padding:20px;
+    border-radius:5px;
+    box-shadow: 0 5px 10px rgb(206, 30, 156);
+    background: rgb(253, 183, 232);
+    text-align:center;
+}
+
+.form-container form h2{
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.form-container form input{
+    width:75%;
+    padding: 10px 15px;
+    font-size: 20px;
+    margin:8px 0;
+    border-radius: 5px;
+}
+
+.form-container form .form-btn{
+    background: #ffffff;
+    color: rgb(31, 2, 255);
+    
+}
+
+.form-container form .form-btn:hover{
+    background: #e4e2e2;
+}
+
+.form-container form p{
+    margin-top: 10px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.form-container form p a{
+    font-size: 20px;
+    color: rgb(31, 2, 255);
+}
+
+.form-container form .error-msg{
+    color: rgb(218, 25, 51);
+    font-size:50px;
+}
