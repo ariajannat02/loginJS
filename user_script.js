@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Check if logged in
+    // Check if user is logged in
     const userName = localStorage.getItem("user_name");
     if (userName) {
         document.getElementById("user-name").textContent = userName;
